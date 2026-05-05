@@ -53,7 +53,7 @@ Run the main script from your terminal:
     ```bash
     python main.py
     ```
-3.**Expected Output:**
+3. **Expected Output:**
 
 The script will log the four stages of the RAG pipeline (Ingestion, Database Setup, Initialization, Execution) before returning the AI's factual answer based on the document provided.
 
