@@ -44,16 +44,16 @@ The agent is intentionally configured with a strict system prompt and a temperat
 
 ## Usage
 
-### 1. Add your document: Place the PDF you wish to query in the root directory of the project and ensure it is named sample_document.pdf (or update the target_pdf variable in main.py).
+1. **Add your document: Place the PDF you wish to query in the root directory of the project and ensure it is named sample_document.pdf (or update the target_pdf variable in main.py).**
 
-### 2. Execute the Agent:
+2. **Execute the Agent:**
 
 Run the main script from your terminal:
 
     ```bash
     python main.py
     ```
-### 3. Expected Output: 
+3.**Expected Output:**
 
 The script will log the four stages of the RAG pipeline (Ingestion, Database Setup, Initialization, Execution) before returning the AI's factual answer based on the document provided.
 
