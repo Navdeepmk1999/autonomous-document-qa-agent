@@ -19,7 +19,7 @@ The agent is intentionally configured with a strict system prompt and a temperat
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/Navdeepmk1999/autonomous-document-qa-agent.git](https://github.com/Navdeepmk1999/autonomous-document-qa-agent.git)
+   git clone https://github.com/Navdeepmk1999/autonomous-document-qa-agent.git
    cd autonomous-document-qa-agent
     ```
 
