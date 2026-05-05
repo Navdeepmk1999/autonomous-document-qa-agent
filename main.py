@@ -8,7 +8,7 @@ from langchain_classic.chains import create_retrieval_chain
 from langchain_classic.chains.combine_documents import create_stuff_documents_chain
 from langchain_core.prompts import ChatPromptTemplate
 
-# Load environment variables from .env file
+# Loading the environment variables from .env file
 load_dotenv()
 
 def build_qa_agent(pdf_path, query):
@@ -21,13 +21,13 @@ def build_qa_agent(pdf_path, query):
     splits = text_splitter.split_documents(docs)
 
     print("2. Setting up Vector Database...")
-    # Using persist_directory saves the embeddings locally so you don't pay OpenAI every time
+    # Using persist_directory saves the embeddings locally so we don't pay OpenAI every time
     vectorstore = Chroma.from_documents(
         documents=splits, 
         embedding=OpenAIEmbeddings(),
         persist_directory="./chroma_db" 
     )
-    # k=3 means retrieve the top 3 most relevant chunks
+    # k=3 means retrieving the top 3 most relevant chunks
     retriever = vectorstore.as_retriever(search_kwargs={"k": 3})
 
     print("3. Initializing LLM and Agentic Workflow...")
@@ -54,7 +54,7 @@ def build_qa_agent(pdf_path, query):
     return response["answer"]
 
 if __name__ == "__main__":
-    # Ensure you have a file named 'sample_document.pdf' in the root folder
+    # Ensuring we have a file named 'sample_document.pdf' in the root folder
     target_pdf = "sample_document.pdf"
     
     # Test Query 1: Factual Retrieval
